@@ -1,105 +1,26 @@
 <!DOCTYPE html>
 <html>
-
 <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width">
- <title>Form validation</title>
+ <title>Form Validation</title>
+ <link rel="stylesheet" href="style.css">
 </head>
-<style>
-
-* {
- text-align: center;
-}
-
- body {
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding-top: 20px;
-  padding-bottom: 20px;
- }
-
- .container {
-  background-color: #111;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(107, 66, 66, 0.3);
-  overflow: hidden;
-  width: 400px;
-  max-width: 100%;
-  position: relative;
-}
-
-.header {
-  color: white;
-  text-align: center;
-  background-color: #111;
-  padding-top: 10px;
-}
-
-.sign-up button {
- margin: 0;
- transform: translate(0%);
- padding: 13px;
- border-radius: 9px;
- background-color: blue;
-  color: white;
- }
-
- .form {
-   padding: 30px 40px;
- }
-
- .form-control {
-  color: white;
- }
-
-
- input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-
- }
-
-
- .form button {
-  width: 100%;
-  background-color: black;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 40px;
-  cursor: pointer;
- }
-</style>
-
 <body>
-<div class="container">
 
+<!---Html codes for Form validation--->
+<div class="container">
  <div class="header">
 <h1> Register With Us</h1>
 <h4> ---Sign up with</h4>
- </div>
-
- <div class="sign-up">
-  <button>Sign up with Google</button>
-  <button>Sign up with Facebook</button>
- </div>
-
+<h4 style="color: white;"><a href="https://www.google.com">Sign up with Google</a></h4>
+<h4 style="color: white;"><a href="https://www.facebook.com">Sign up with Facebook</a></h4>
+</div>
  <div class="form">
   <div class="form-control">
 <h4>Username (Your first and last name)</h4>
 
+<!--id linked with Js for selectimg DOM methods such get element function-->
 <input type="text" id="firstname" name="firstname" placeholder="Firstname" required>
 <p style="color:red" id="fn"></p>
 
@@ -107,18 +28,19 @@
 <p style="color:red" id="ln"></p>
   </div>
 
+  <!--Client Email sectiom-->
   <div class="form-control">
 <h4>Email</h4>
 <input type="text" id="email" name="email" class="btnwidth" placeholder="Enter email" required>
 <p style="color:red" id="em"></p>
   </div>
 
+  <!--Client password section-->
 <div class="form-control">
 <h4>Password</h4>
 <input type="password" id="password1" class="validate" name="password" placeholder="Enter password" required>
 <p style="color:red" id="p1"></p>
 </div>
-
 <div class="form-control">
 <h4>Confirm Password</h4>
 <input type="password" id="password2" class=" btnwidth" name="password" placeholder="Enter password again" required>
@@ -128,80 +50,13 @@
 <small style="color: white; ">I've read and agree with terms of service and our privacy policy</small> 
 <input type="checkbox" required>
 
+<!--tocheck() linked with Js function-->
 <button onclick="tocheck()">Submit</button>
  </div>
 </div>
- 
 </body>
-<script>
- function tocheck() {
-  var fn = document.getElementById("firstname").value;
-  var ln = document.getElementById("lastname").value;
-  var em = document.getElementById("email").value;
-  var p1 = document.getElementById("password1").value;
-  var p2 = document.getElementById("password2").value;
 
-
-  if (p1 === "" || p1.length < 6) {
-   document.getElementById("p1").innerHTML = "Password must be at least 6 characters";
-
-   document.getElementById("password1").style.borderColor = "red";
-  }
-  else {
-
-   document.getElementById("password1").style.borderColor = "green";
-   document.getElementById("p1").innerHTML = "";
-
-  }
-
-  if (p1 !== p2 || p2 === "") {
-   document.getElementById("p2").innerHTML = "Passwords do not match";
-
-   document.getElementById("password1").style.borderColor = "red";
-   document.getElementById("password2").style.borderColor = "red";
-  }
-  else {
-
-   document.getElementById("password2").style.borderColor = "green";
-   document.getElementById("p2").innerHTML = "";
-
-  }
-
-  if (fn === "") {
-   document.getElementById("fn").innerHTML = "Please enter a valid name";
-
-   document.getElementById("firstname").style.borderColor = "red";
-  }
-  else {
-
-   document.getElementById("firstname").style.borderColor = "green";
-   document.getElementById("fn").innerHTML = "";
-  }
-
-  if (ln === "") {
-   document.getElementById("ln").innerHTML = "Please enter a valid name";
-
-   document.getElementById("lastname").style.borderColor = "red";
-  }
-  else {
-
-   document.getElementById("lastname").style.borderColor = "green";
-   document.getElementById("ln").innerHTML = "";
-
-  }
-
-  if (em === "") {
-   document.getElementById("em").innerHTML = "Please enter a valid email";
-
-   document.getElementById("em").style.borderColor = "red";
-  }
-  else {
-
-   document.getElementById("email").style.borderColor = "green";
-   document.getElementById("em").innerHTML = "";
-  }
- }
-
+<!--link to javascript-->
+<script src="main.js">
 </script>
-
 </html>

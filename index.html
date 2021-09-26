@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width">
- <title>Form Validation</title>
- <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>form validation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!---Html codes for Form validation--->
-<div class="container">
- <div class="header">
-<h1> Register With Us</h1>
-<h4> ---Sign up with</h4>
-<h4 style="color: white;"><a href="https://www.google.com">Sign up with Google</a></h4>
-<h4 style="color: white;"><a href="https://www.facebook.com">Sign up with Facebook</a></h4>
-</div>
- <div class="form">
-  <div class="form-control">
-<h4>Username (Your first and last name)</h4>
+  <!--Html codes for Form validation-->
+  <div class="container">
+    <div class="header">
+      <h1> Register With Us</h1>
+    </div>
 
-<!--id linked with Js for selectimg DOM methods such get element function-->
-<input type="text" id="firstname" name="firstname" placeholder="Firstname" required>
-<p style="color:red" id="fn"></p>
+    <!--Client header section-->
+    <div class="form">
+      <div class="form-control">
+        <h4>Username</h4>
+        <!--Id linked with Js for selecting DOM methods for thr get element functon-->
+        <input type="text" id="firstname" name="firstname" placeholder="Username" required>
+        <p style="color:red" id="firstName"></p>
+      </div>
 
-<input type="text" id="lastname" name="lastname" placeholder="Lastname" required>
-<p style="color:red" id="ln"></p>
+      <!--Client Email Section-->
+      <div class="form-control">
+        <h4>Email</h4>
+        <input type="text" id="email" name="email" class="btnwidth" placeholder="Enter email" required>
+        <p style="color:red" id="emailInput"></p>
+      </div>
+
+      <!--Client password section-->
+      <div class="form-control">
+        <h4>Password</h4>
+        <input type="password" id="passWord1" class="btnwidth" name="password" placeholder="Enter password" required>
+        <p style="color:red" id="passWord"></p>
+      </div>
+
+      <div class="form-control">
+        <h4>Confirm Password</h4>
+        <input type="password" id="password2" class=" btnwidth" name="password" placeholder="Enter password again"
+          required>
+        <br>
+        <p style="color:red" id="passWord2"></p>
+      </div>
+
+      <!--tocheck() linked with Js function-->
+      <button onclick="tocheck()">Submit</button>
+    </div>
   </div>
-
-  <!--Client Email sectiom-->
-  <div class="form-control">
-<h4>Email</h4>
-<input type="text" id="email" name="email" class="btnwidth" placeholder="Enter email" required>
-<p style="color:red" id="em"></p>
-  </div>
-
-  <!--Client password section-->
-<div class="form-control">
-<h4>Password</h4>
-<input type="password" id="password1" class="validate" name="password" placeholder="Enter password" required>
-<p style="color:red" id="p1"></p>
-</div>
-<div class="form-control">
-<h4>Confirm Password</h4>
-<input type="password" id="password2" class=" btnwidth" name="password" placeholder="Enter password again" required>
-<br>
-<p style="color:red" id="p2"></p>
-</div>
-<small style="color: white; ">I've read and agree with terms of service and our privacy policy</small> 
-<input type="checkbox" required>
-
-<!--tocheck() linked with Js function-->
-<button onclick="tocheck()">Submit</button>
- </div>
-</div>
 </body>
 
 <!--link to javascript-->
 <script src="main.js">
 </script>
+
 </html>
